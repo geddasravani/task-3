@@ -1,0 +1,27 @@
+{
+  "stats": [
+    { "title": "Total Projects", "value": "24", "icon": "bi-briefcase-fill", "color": "primary" },
+    { "title": "Clients Served", "value": "150", "icon": "bi-people-fill", "color": "success" },
+    { "title": "Revenue (₹)", "value": "4,20,000", "icon": "bi-currency-rupee", "color": "warning" },
+    { "title": "Pending Tasks", "value": "7", "icon": "bi-clock-fill", "color": "danger" }
+  ],
+  "projects": [
+    { "id": 1, "name": "SRAVS Portfolio Website", "client": "Self", "status": "Completed", "date": "2025-01-10", "tech": "HTML, Bootstrap" },
+    { "id": 2, "name": "E-Commerce UI", "client": "RetailCo", "status": "In Progress", "date": "2025-03-15", "tech": "Bootstrap 5, JS" },
+    { "id": 3, "name": "Admin Dashboard", "client": "TechStartup", "status": "Completed", "date": "2025-02-20", "tech": "Mazer, JS" },
+    { "id": 4, "name": "Landing Page Design", "client": "HealthApp", "status": "Pending", "date": "2025-04-01", "tech": "HTML, CSS" },
+    { "id": 5, "name": "Blog Platform", "client": "MediaHouse", "status": "In Progress", "date": "2025-04-10", "tech": "Bootstrap, JS" }
+  ],
+  "skills": [
+    { "name": "HTML & CSS", "percent": 95 },
+    { "name": "Bootstrap 5", "percent": 90 },
+    { "name": "JavaScript", "percent": 80 },
+    { "name": "Responsive Design", "percent": 88 },
+    { "name": "UI/UX Basics", "percent": 75 }
+  ],
+  "messages": [
+    { "from": "Ravi Kumar", "subject": "Project Quote Request", "time": "2h ago", "read": false },
+    { "from": "Priya Sharma", "subject": "Dashboard Feedback", "time": "5h ago", "read": true },
+    { "from": "Akash M", "subject": "New Task Assignment", "time": "1d ago", "read": false }
+  ]
+}

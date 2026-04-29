@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – SRAVS</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <img src="https://t4.ftcdn.net/jpg/05/08/08/39/360_F_508083947_R0dVeKhEzX8EP6m523Zl6V0M96v0veDL.jpg" alt="logo">
+    <div>
+      <span>SRAVS</span>
+      <small>Dashboard</small>
+    </div>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Main</div>
+    <a href="index.html"><i class="bi bi-grid-fill"></i> Dashboard</a>
+    <a href="about.html"><i class="bi bi-person-circle"></i> About Me</a>
+    <a href="contact.html" class="active"><i class="bi bi-envelope-fill"></i> Contact <span class="badge-pill">2</span></a>
+    <div class="nav-section-label">Projects</div>
+    <a href="#"><i class="bi bi-folder2-open"></i> All Projects</a>
+    <a href="#"><i class="bi bi-plus-circle-fill"></i> Add New</a>
+    <div class="nav-section-label">Settings</div>
+    <a href="#"><i class="bi bi-gear-fill"></i> Settings</a>
+    <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
+  </nav>
+</aside>
+
+<div class="main-content">
+  <header class="topbar">
+    <div class="topbar-title">
+      <h5>Contact</h5>
+      <p>Get in touch with SRAVS</p>
+    </div>
+    <div class="topbar-actions">
+      <button class="topbar-icon" onclick="toggleSidebar()"><i class="bi bi-list"></i></button>
+      <img src="https://t4.ftcdn.net/jpg/05/08/08/39/360_F_508083947_R0dVeKhEzX8EP6m523Zl6V0M96v0veDL.jpg" class="user-avatar" alt="user">
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="row g-4">
+
+      <!-- Contact Details -->
+      <div class="col-lg-5">
+        <div class="section-card animate-in">
+          <div class="card-head"><h5><i class="bi bi-info-circle-fill me-2 text-primary"></i>Contact Details</h5></div>
+          <div style="display:flex;flex-direction:column;gap:20px">
+
+            <div style="display:flex;align-items:center;gap:16px;padding:16px;background:#f8faff;border-radius:12px">
+              <div style="width:48px;height:48px;background:var(--primary);border-radius:12px;display:flex;align-items:center;justify-content:center">
+                <i class="bi bi-envelope-fill" style="color:#fff;font-size:1.2rem"></i>
+              </div>
+              <div>
+                <div style="font-weight:600;font-size:0.875rem">Email</div>
+                <a href="mailto:sravanigedda2108@gmail.com" style="color:#64748b;font-size:0.8rem;text-decoration:none">sravanigedda2108@gmail.com</a>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:16px;padding:16px;background:#f8faff;border-radius:12px">
+              <div style="width:48px;height:48px;background:#10b981;border-radius:12px;display:flex;align-items:center;justify-content:center">
+                <i class="bi bi-telephone-fill" style="color:#fff;font-size:1.2rem"></i>
+              </div>
+              <div>
+                <div style="font-weight:600;font-size:0.875rem">Phone</div>
+                <span style="color:#64748b;font-size:0.8rem">+91 7730963605</span>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:16px;padding:16px;background:#f8faff;border-radius:12px">
+              <div style="width:48px;height:48px;background:#f59e0b;border-radius:12px;display:flex;align-items:center;justify-content:center">
+                <i class="bi bi-globe" style="color:#fff;font-size:1.2rem"></i>
+              </div>
+              <div>
+                <div style="font-weight:600;font-size:0.875rem">Portfolio</div>
+                <a href="https://geddasravani.github.io/Task-2-task-1-/index.html" target="_blank"
+                   style="color:#64748b;font-size:0.8rem;text-decoration:none">View Live Website →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Inbox from JSON -->
+        <div class="section-card mt-4 animate-in">
+          <div class="card-head">
+            <h5><i class="bi bi-chat-dots-fill me-2 text-primary"></i>Recent Messages</h5>
+            <span class="badge bg-danger rounded-pill">2 new</span>
+          </div>
+          <div id="messagesContainer"></div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="section-card animate-in">
+          <div class="card-head"><h5><i class="bi bi-send-fill me-2 text-primary"></i>Send a Message</h5></div>
+          <div class="contact-form">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" placeholder="Your Name">
+              </div>
+              <div class="col-md-6">
+                <input type="email" placeholder="Your Email">
+              </div>
+            </div>
+            <input type="text" placeholder="Subject">
+            <textarea rows="6" placeholder="Write your message here..."></textarea>
+            <button class="btn-primary-custom" onclick="sendMessage()">
+              <i class="bi bi-send-fill"></i> Send Message
+            </button>
+            <div id="successMsg" style="display:none;margin-top:14px;padding:12px 16px;background:#d1fae5;color:#059669;border-radius:10px;font-size:0.875rem;font-weight:600">
+              <i class="bi bi-check-circle-fill me-2"></i>Message sent successfully!
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="main-footer">© 2026 SRAVS · Contact Page</footer>
+</div>
+
+<script src="js/dashboard.js"></script>
+<script>
+function sendMessage() {
+  document.getElementById('successMsg').style.display = 'block';
+  setTimeout(() => {
+    document.getElementById('successMsg').style.display = 'none';
+  }, 4000);
+}
+</script>
+</body>
+</html>
